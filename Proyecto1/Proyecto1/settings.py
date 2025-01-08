@@ -73,19 +73,47 @@ WSGI_APPLICATION = 'Proyecto1.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
+#mysql
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'lubricentroalex',  # Cambia esto por el nombre de tu base de datos
+#         'USER': 'root',            # Cambia esto por tu nombre de usuario MySQL
+#         'PASSWORD': '1234',     # Cambia esto por tu contraseña MySQL
+#         'HOST': 'localhost',
+#         #'HOST': 'host.docker.internal',
+#         #'HOST': 'db',#'HOST': 'localhost',                   # O la dirección de tu servidor de base de datos
+#         'PORT': '3306',                        # El puerto por defecto de MySQL es 3306
+        
+#     }
+# }
+# local
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'lubricentroalex',  # Cambia esto por el nombre de tu base de datos
+#         'USER': 'root',            # Cambia esto por tu nombre de usuario MySQL
+#         'PASSWORD': '1234',     # Cambia esto por tu contraseña MySQL
+#         'HOST': 'localhost',
+#         'PORT': '3306',                        # El puerto por defecto de MySQL es 3306
+        
+#     }
+# }
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'lubricentroalex',  # Cambia esto por el nombre de tu base de datos
-        'USER': 'root',            # Cambia esto por tu nombre de usuario MySQL
-        'PASSWORD': '1234',     # Cambia esto por tu contraseña MySQL
-        'HOST': 'localhost',                   # O la dirección de tu servidor de base de datos
-        'PORT': '3306',                        # El puerto por defecto de MySQL es 3306
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'lubricentroalex',
+        'USER': 'root',
+        'PASSWORD': 'K6P5RAeT6J4obXN9PBfzJnV86ak0VXy3',
+        'HOST': 'dpg-ctv8cfd6l47c739uebsg-a.oregon-postgres.render.com',  # External Database URL (host)
+        'PORT': '5432',
     }
 }
 
-
+# Si usas PyMySQL en lugar de mysqlclient
+#import pymysql
+#pymysql.install_as_MySQLdb()
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
