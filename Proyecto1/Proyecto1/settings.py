@@ -76,10 +76,15 @@ WSGI_APPLICATION = 'Proyecto1.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'lubricentroalex',  # Cambia esto por el nombre de tu base de datos
+        'USER': 'root',            # Cambia esto por tu nombre de usuario MySQL
+        'PASSWORD': '1234',     # Cambia esto por tu contraseña MySQL
+        'HOST': 'localhost',                   # O la dirección de tu servidor de base de datos
+        'PORT': '3306',                        # El puerto por defecto de MySQL es 3306
     }
 }
+
 
 
 # Password validation
@@ -122,3 +127,23 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+
+# LOGGING = {
+#     'version': 1,
+#     'disable_existing_loggers': False,
+#     'handlers': {
+#         'console': {
+#             'level': 'DEBUG',
+#             'class': 'logging.StreamHandler',
+#         },
+#     },
+#     'loggers': {
+#         'django': {
+#             'handlers': ['console'],
+#             'level': 'DEBUG',
+#             'propagate': True,
+#         },
+#     },
+# }
